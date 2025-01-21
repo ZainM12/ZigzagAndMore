@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zigzag and More</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+VN&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevents horizontal scroll */
+        }
+
+        /* Video background */
+        #background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Makes sure the video stays in the background */
+        }
+
+        /* Text container */
+        #text-container {
+            text-align: center; /* Centers text horizontally */
+            margin-top: 20px; /* Adjusts spacing from the top of the page */
+            position: relative; /* Ensures text remains on top of the video */
+            z-index: 1;
+            color: white;
+        }
+
+        h1 {
+            font-size: 80px;
+            font-family: sans-serif;
+            margin: 0;
+            color: black;
+        }
+
+        #p1 {
+            font-size: 20px;
+            margin: 5px 0;
+            font-family: "Playwrite VN", serif;
+            color: black;
+            position: relative;
+            top: -225px;
+            right: -50px;
+        }
+
+        #p2 {
+            font-size: 25px;
+            font-family: "Playwrite VN", serif;
+            color: black;
+            position: relative;
+            top: -225px;
+            right: -50px;
+        }
+
+        #headd {
+            max-height: 200px;
+            max-width: 200px;
+            display: block;
+            margin: 0 auto; 
+            position: relative;
+            left: -230px;
+        }
+
+        /* Image container */
+        #imgDiv {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flexible columns */
+            gap: 20px;
+            justify-items: center;
+            margin: 40px;
+            padding: 10px;
+        }
+
+        img {
+            max-height: 400px;
+            max-width: 100%;
+            border-radius: 25px;
+            display: block;
+        }
+
+        button {
+            background-color: transparent;
+            color: rgb(0, 0, 0);
+            font-family: "PT Serif", serif;
+            font-size: 25px;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 2s ease;
+            position: absolute;
+            top: -200px;
+            z-index: 2;
+            transition: 2s;
+        }
+
+        /* Hover effect for buttons */
+        button:hover {
+            color: rgb(255, 255, 255);
+            text-decoration: underline;
+            text-decoration-color: rgb(4, 4, 7);
+        }
+
+        /* Info button positioning */
+        #info-button {
+            right: 20px;
+            bottom: 20px;
+            text-decoration: underline;
+            text-decoration-color: black;
+        }
+
+        /* Home button positioning */
+        #home-button {
+            left: 20px;
+            bottom: 20px;
+            
+        }
+
+        /* Active button effect */
+        button:active {
+            transform: scale(0.95);
+        }
+
+        /* WhatsApp group link styling */
+        #accs {
+            font-size: larger;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Background video -->
+    <video autoplay muted loop id="background-video">
+        <source src="images/video1.mp4" type="video/mp4">
+    </video>
+
+    <!-- Text content -->
+    <div id="text-container">
+        <h1 style="color: rgb(255, 255, 255);">ZIGZAG & MORE</h1>
+        <img src="images/1.jpg" alt="Handmade Bracelet 2" id="headd">
+        <p id="p2" style="color: rgb(255, 255, 255);">Bracelets & More</p>
+        <p id="p1" style="color: rgb(255, 253, 253);
+        ">Handmade Crafts</p>
+
+        <button type="button" id="info-button">Info</button>
+        <button type="button" id="home-button">Home</button>
+
+        <script>
+            document.getElementById("home-button").onclick = function(){
+                window.location = "index.html";
+            }
+            document.getElementById("info-button").onclick = function(){
+                window.location = "info.html";
+            }
+        </script>
+    </div>
+
+    <style>
+        #link1{
+            color:rgb(235, 40, 186)
+        }
+    </style>
+
+    <div id="accs">
+        
+        <p style="color:rgb(255, 255, 255)">WhatsApp group: <a id="link1" href="https://chat.whatsapp.com/Ln9V5vFTaQ8KcqwGzzirNJ">https://chat.whatsapp.com/Ln9V5vFTaQ8KcqwGzzirNJ</a></p>
+        <p style="color:rgb(255, 255, 255)"> WhatsApp channel: <A id="link1" href="https://www.whatsapp.com/channel/0029Vao9C8MFHWpy3YqkCZ0a">https://www.whatsapp.com/channel/0029Vao9C8MFHWpy3YqkCZ0a</A></p>
+        <p style="color:rgb(255, 255, 255)">pintrest acc: <a id="link1" href="https://www.pinterest.com/laloelsahhar/?invite_code=b2e92c5cec6c44708dba8ae0e803f7e0&sender=899242388005023037">https://www.pinterest.com/laloelsahhar/?invite_code=b2e92c5cec6c44708dba8ae0e803f7e0&sender=899242388005023037</a> </p>
+    </div>
+   
+</body>
+</html>
