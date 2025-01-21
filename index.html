@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zigzag and More</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+VN&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevents horizontal scroll */
+        }
+
+        /* Video background */
+        #background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Makes sure the video stays in the background */
+        }
+
+        /* Text container */
+        #text-container {
+            text-align: center; /* Centers text horizontally */
+            margin-top: 20px; /* Adjusts spacing from the top of the page */
+            position: relative; /* Ensures text remains on top of the video */
+            z-index: 1;
+            color: white;
+        }
+
+        h1 {
+            font-size: 80px;
+            font-family: sans-serif;
+            margin: 0;
+            color: black;
+        }
+
+        #p1 {
+            font-size: 20px;
+            margin: 5px 0;
+            font-family: "Playwrite VN", serif;
+            color: black;
+            position: relative;
+            top: -225px;
+            right: -50px;
+        }
+
+        #p2 {
+            font-size: 25px;
+            font-family: "Playwrite VN", serif;
+            color: black;
+            position: relative;
+            top: -225px;
+            right: -50px;
+        }
+
+        #headd {
+            max-height: 200px;
+            max-width: 200px;
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            left: -230px;
+        }
+
+        /* Image container */
+        #imgDiv {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flexible columns */
+            gap: 20px;
+            justify-items: center;
+            margin: 40px;
+            padding: 10px;
+        }
+
+        img {
+            max-height: 400px;
+            max-width: 100%;
+            border-radius: 25px;
+            display: block;
+        }
+
+        /* Style for select dropdown */
+        #sort-select {
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #sort-select option {
+            background-color: pink; /* Default background color */
+            color: black; /* Default text color */
+            padding: 10px;
+        }
+
+        /* Hover effect */
+        #sort-select option:hover {
+            background-color: pink; /* Background color on hover */
+            color: black; /* Ensure text remains visible */
+        }
+
+        button {
+            background-color: transparent;
+            color: rgb(0, 0, 0);
+            font-family: "PT Serif", serif;
+            font-size: 25px;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            position: absolute;
+            top: -200px;
+            z-index: 2;
+            transition: 2s;
+        }
+
+        /* Hover effect for buttons */
+        button:hover {
+            color: rgb(255, 255, 255);
+            text-decoration: underline;
+            text-decoration-color: rgb(4, 4, 7);
+        }
+
+        /* Info button positioning */
+        #info-button {
+            right: 20px;
+            bottom: 20px;
+        }
+
+        #info-button:hover{
+            color: rgb(255, 255, 255);
+            text-decoration: underline;
+            text-decoration-color: white;
+        }
+
+        /* Home button positioning - Adjusted slightly to the left */
+        #home-button {
+            left: 20px;  /* Make sure the home button is a little to the left */
+            bottom: 20px;
+            text-decoration: underline;
+            text-decoration-color: black;
+        }
+
+        #home-button:hover{
+            color: rgb(255, 255, 255);
+            text-decoration: underline;
+            text-decoration-color: white;
+        }
+
+        /* Active button effect */
+        button:active {
+            transform: scale(0.95); /* Adds a slight "pressed" effect */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background video -->
+    <video autoplay muted loop id="background-video">
+        <source src="images/video1.mp4" type="video/mp4">
+    </video>
+
+    <!-- Text content -->
+    <div id="text-container">
+        <h1>ZIGZAG & MORE</h1>
+     
+        <div style="margin: 20px; text-align: center;">
+
+
+
+        </div>
+
+
+        <img src="images/1.jpg" alt="Handmade Bracelet 2" id="headd">
+        <p id="p2">Bracelets & More</p>
+        <p id="p1">Handmade Crafts</p>
+
+        <button type="button" id="info-button">Info</button>
+        <button type="button" id="home-button">Home</button>
+
+        <script>
+            document.getElementById("info-button").onclick = function(){
+                window.location = "info.html";
+            }
+
+            document.getElementById("home-button").onclick = function(){
+                window.location = "index.html";
+            }
+        </script>
+    </div>
+
+    <!-- Image Gallery -->
+    <div id="imgDiv">
+<!-- image deleted here -->
+<img src="images/2.jpg" alt="Handmade Bracelet 2">
+<img src="images/3.jpg" alt="Handmade Bracelet 3">
+<img src="images/4.jpg" alt="Handmade Bracelet 4">
+<img src="images/5.jpg" alt="Handmade Bracelet 5">
+<img src="images/6.jpg" alt="Handmade Bracelet 6">
+<img src="images/7.jpg" alt="Handmade Bracelet 7">
+<img src="images/8.jpg" alt="Handmade Bracelet 8">
+<img src="images/9.jpg" alt="Handmade Bracelet 9">
+<!-- image deleted here bec. image binaries not defined-->
+<img src="images/11.jpg" alt="Handmade Bracelet 11">
+<img src="images/12.jpg" alt="Handmade Bracelet 12">
+<img src="images/13.jpg" alt="Handmade Bracelet 13">
+<img src="images/14.jpg" alt="Handmade Bracelet 14">
+<img src="images/15.jpg" alt="Handmade Bracelet 15">
+<img src="images/16.jpg" alt="Handmade Bracelet 16">
+<img src="images/17.jpg" alt="Handmade Bracelet 17">
+<img src="images/18.jpg" alt="Handmade Bracelet 18">
+<img src="images/19.jpg" alt="Handmade Bracelet 19">
+<img src="images/20.jpg" alt="Handmade Bracelet 20">
+<img src="images/21.jpg" alt="Handmade Bracelet 21">
+<img src="images/22.jpg" alt="Handmade Bracelet 22">
+<img src="images/23.jpg" alt="Handmade Bracelet 23">
+<img src="images/24.jpg" alt="Handmade Bracelet 24">
+<img src="images/25.jpg" alt="Handmade Bracelet 25">
+<img src="images/26.jpg" alt="Handmade Bracelet 26">
+<img src="images/27.jpg" alt="Handmade Bracelet 27">
+<img src="images/28.jpg" alt="Handmade Bracelet 28">
+<!-- image deleted here--> 
+<img src="images/30.jpg" alt="Handmade Bracelet 30">
+<img src="images/31.jpg" alt="Handmade Bracelet 31">
+<img src="images/32.jpg" alt="Handmade Bracelet 32">
+<img src="images/34.jpg" alt="Handmade Bracelet 34">
+<img src="images/35.jpg" alt="Handmade Bracelet 35">
+<img src="images/36.jpg" alt="Handmade Bracelet 36">
+<img src="images/37.jpg" alt="Handmade Bracelet 37">
+<img src="images/38.jpg" alt="Handmade Bracelet 38">
+<img src="images/39.jpg" alt="Handmade Bracelet 39">
+<img src="images/40.jpg" alt="Handmade Bracelet 40">
+<img src="images/41.jpg" alt="Handmade Bracelet 41">
+<img src="images/42.jpg" alt="Handmade Bracelet 42">
+<img src="images/43.jpg" alt="Handmade Bracelet 43">
+<img src="images/44.jpg" alt="Handmade Bracelet 44">
+<img src="images/45.jpg" alt="Handmade Bracelet 45">
+<img src="images/46.jpg" alt="Handmade Bracelet 46">
+<img src="images/47.jpg" alt="Handmade Bracelet 47">
+<img src="images/48.jpg" alt="Handmade Bracelet 48">
+<img src="images/49.jpg" alt="Handmade Bracelet 49">
+<img src="images/50.jpg" alt="Handmade Bracelet 50">
+<img src="images/51.jpg" alt="Handmade Bracelet 51">
+<img src="images/52.jpg" alt="Handmade Bracelet 52">
+<img src="images/53.jpg" alt="Handmade Bracelet 53">
+<img src="images/54.jpg" alt="Handmade Bracelet 54">
+<img src="images/55.jpg" alt="Handmade Bracelet 55">
+<img src="images/56.jpg" alt="Handmade Bracelet 56">
+<img src="images/57.jpg" alt="Handmade Bracelet 57">
+<img src="images/58.jpg" alt="Handmade Bracelet 58">
+<img src="images/59.jpg" alt="Handmade Bracelet 59">
+<img src="images/60.jpg" alt="Handmade Bracelet 60">
+<img src="images/61.jpg" alt="Handmade Bracelet 61">
+<img src="images/62.jpg" alt="Handmade Bracelet 62">
+<img src="images/63.jpg" alt="Handmade Bracelet 63">
+<img src="images/64.jpg" alt="Handmade Bracelet 64">
+<img src="images/65.jpg" alt="Handmade Bracelet 65">
+<img src="images/93.jpg" alt="Handmade Bracelet 67">
+<img src="images/94.jpg" alt="Handmade Bracelet 68">
+<img src="images/95.jpg" alt="Handmade Bracelet 69">
+    </div>
+
+</body>
+</html>
